@@ -17,6 +17,7 @@ public class Scheduler : MonoBehaviour {
     public void Scheduleparameter(float delay, string message)
     {
         Debug.Log("delay is " + delay);
+        StartCoroutine(RunDelay(delay, message));
     }
 
     private IEnumerator RunDelay(float delay, string message)
