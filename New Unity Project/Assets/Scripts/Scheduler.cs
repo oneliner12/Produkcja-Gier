@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Scheduler : MonoBehaviour {
 
@@ -14,16 +15,17 @@ public class Scheduler : MonoBehaviour {
     }
     public static Scheduler _Instance { get; private set; }
 
-    public void Scheduleparameter(float delay, string message)
+    public void Scheduleparameter(float delay, Action action)
     {
         Debug.Log("delay is " + delay);
-        StartCoroutine(RunDelay(delay, message));
+        StartCoroutine(RunDelay(delay,action));
+        action();
     }
 
-    private IEnumerator RunDelay(float delay, string message)
+    private IEnumerator RunDelay(float delay,Action action)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("DelayedAttribute message:" + message);
+        Debug.Log("DelayedAttribute message:" + action);
 
     }
 }
