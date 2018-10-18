@@ -314,6 +314,7 @@
     <Compile Include="Assets\Scripts\PowerPickUp.cs" />
     <Compile Include="Assets\Scripts\projektPG.cs" />
     <Compile Include="Assets\Scripts\Scheduler.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
